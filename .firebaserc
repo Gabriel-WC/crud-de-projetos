@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "projetocrud-941a5",
+    "dev": "projetocrud-941a5",
+    "prod": "projetocrud2-be018"
+  }
+}

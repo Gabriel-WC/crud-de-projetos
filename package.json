@@ -1,0 +1,40 @@
+{
+  "name": "mini-jira-firebase",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "build:dev": "vite build --mode development",
+    "build:prod": "vite build --mode production",
+    "preview": "vite preview",
+    "preview:dev": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "deploy:firestore:dev": "firebase deploy --project dev --only firestore:rules,firestore:indexes",
+    "deploy:firestore:prod": "firebase deploy --project prod --only firestore:rules,firestore:indexes",
+    "deploy:hosting:dev": "firebase deploy --project dev --only hosting",
+    "deploy:hosting:prod": "firebase deploy --project prod --only hosting",
+    "deploy:dev": "npm run build:dev && firebase deploy --project dev --only firestore:rules,firestore:indexes,hosting",
+    "deploy:prod": "npm run build:prod && firebase deploy --project prod --only firestore:rules,firestore:indexes,hosting"
+  },
+  "dependencies": {
+    "firebase": "^11.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.14.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "vite": "^5.4.10"
+  }
+}
