@@ -1,7 +1,7 @@
 function FormField({ label, name, type = 'text', placeholder, value, onChange, required = false }) {
   return (
     <label className="block">
-      <span className="mb-2 block text-sm font-medium text-slate-200">{label}</span>
+      <span className="mb-2 block text-sm font-bold text-[#5b3d7a]">{label}</span>
       <input
         type={type}
         name={name}
@@ -9,7 +9,7 @@ function FormField({ label, name, type = 'text', placeholder, value, onChange, r
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-brand-400"
+        className="w-full rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-medium text-[#41295a] outline-none transition placeholder:text-[#b88ccf] focus:-translate-y-0.5 focus:border-[#ff6ca8]"
       />
     </label>
   );

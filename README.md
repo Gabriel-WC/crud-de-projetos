@@ -128,3 +128,8 @@ src/
 - O board Kanban permite alterar status por seletor e botoes de avancar/voltar.
 - Os arquivos de ambiente do Vite devem ficar na raiz do projeto, nao dentro de `src/`.
 - Os aliases Firebase estao configurados em `.firebaserc` como `dev` e `prod`.
+
+## Alias temporário
+
+- Set-Alias npm "C:\Program Files\nodejs\node.exe"
+  function npm { & "C:\Program Files\nodejs\node.exe" "C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js" $args }
