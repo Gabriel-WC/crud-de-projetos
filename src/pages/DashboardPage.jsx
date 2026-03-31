@@ -97,40 +97,42 @@ function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-[32px] border border-white/10 bg-[linear-gradient(135deg,rgba(37,99,235,0.25),rgba(15,23,42,0.95)),radial-gradient(circle_at_top_right,rgba(56,189,248,0.22),transparent_28%)] p-6 shadow-panel sm:p-8">
+      <section className="rounded-[36px] border-4 border-[#41295a] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.65),_transparent_24%),linear-gradient(135deg,_#ffef9d,_#ffb8d7_48%,_#9fe7ff)] p-6 shadow-panel sm:p-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-brand-100">Dashboard</p>
-            <h2 className="mt-3 text-4xl font-semibold text-white">Seus projetos em um painel central</h2>
-            <p className="mt-4 max-w-2xl text-sm leading-6 text-slate-200">
-              Crie projetos, acompanhe o progresso e abra cada board para organizar tarefas entre backlog,
-              doing e done.
+            <p className="text-sm uppercase tracking-[0.3em] text-[#ff4f95]">Dashboard</p>
+            <h2 className="mt-3 font-display text-4xl font-semibold text-[#41295a]">
+              Seu quartel-general mais fofo e organizado
+            </h2>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[#5b3d7a]">
+              Crie aventuras, acompanhe o progresso e deixe cada tarefa deslizar pelo board com
+              muito mais personalidade.
             </p>
           </div>
 
           <button
             type="button"
             onClick={openCreateModal}
-            className="rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+            className="rounded-[22px] border-4 border-[#41295a] bg-[#fffdf7] px-5 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:-translate-y-0.5"
           >
             Novo projeto
           </button>
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-slate-950/20 p-5">
-            <p className="text-sm text-slate-300">Projetos ativos</p>
-            <p className="mt-3 text-4xl font-semibold text-white">{totalProjects}</p>
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#fff8cc] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Projetos ativos</p>
+            <p className="mt-3 font-display text-4xl font-semibold text-[#41295a]">{totalProjects}</p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-slate-950/20 p-5">
-            <p className="text-sm text-slate-300">Ultimo projeto</p>
-            <p className="mt-3 text-lg font-semibold text-white">
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#ffe0ef] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Ultimo projeto</p>
+            <p className="mt-3 text-lg font-bold text-[#41295a]">
               {latestProject?.name || 'Nenhum projeto ainda'}
             </p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-slate-950/20 p-5">
-            <p className="text-sm text-slate-300">Fluxo recomendado</p>
-            <p className="mt-3 text-lg font-semibold text-white">Backlog -&gt; Doing -&gt; Done</p>
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#dff7ff] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Fluxo recomendado</p>
+            <p className="mt-3 text-lg font-bold text-[#41295a]">Backlog -&gt; Doing -&gt; Done</p>
           </div>
         </div>
       </section>

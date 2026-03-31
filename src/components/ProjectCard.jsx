@@ -3,40 +3,40 @@ import { formatDate } from '../utils/formatDate';
 
 function ProjectCard({ project, onEdit, onDelete }) {
   return (
-    <article className="rounded-[28px] border border-white/10 bg-slate-900/80 p-6 shadow-panel">
+    <article className="rounded-[30px] border-4 border-[#41295a] bg-[#fffdf7] p-6 shadow-panel transition hover:-translate-y-1">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-brand-300">Projeto</p>
-          <h3 className="mt-3 text-2xl font-semibold text-white">{project.name}</h3>
+          <p className="text-xs uppercase tracking-[0.25em] text-[#ff4f95]">Projeto</p>
+          <h3 className="mt-3 font-display text-3xl font-semibold text-[#41295a]">{project.name}</h3>
         </div>
 
         <div className="flex gap-2">
           <button
             type="button"
             onClick={() => onEdit(project)}
-            className="rounded-2xl border border-white/10 px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/5"
+            className="rounded-[18px] border-4 border-[#41295a] bg-[#9fe7ff] px-3 py-2 text-sm font-bold text-[#41295a] shadow-sticker"
           >
             Editar
           </button>
           <button
             type="button"
             onClick={() => onDelete(project)}
-            className="rounded-2xl border border-rose-500/20 px-3 py-2 text-sm font-medium text-rose-200 hover:bg-rose-500/10"
+            className="rounded-[18px] border-4 border-[#41295a] bg-[#ffd1e4] px-3 py-2 text-sm font-bold text-[#7b2853] shadow-sticker"
           >
             Excluir
           </button>
         </div>
       </div>
 
-      <p className="mt-4 text-sm leading-6 text-slate-300">
+      <p className="mt-4 text-base leading-7 text-[#755392]">
         {project.description || 'Sem descricao informada.'}
       </p>
 
       <div className="mt-6 flex items-center justify-between gap-4">
-        <span className="text-xs text-slate-500">Criado em {formatDate(project.createdAt)}</span>
+        <span className="text-xs font-semibold text-[#8d69aa]">Criado em {formatDate(project.createdAt)}</span>
         <Link
           to={`/projects/${project.id}`}
-          className="rounded-2xl bg-brand-500 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-400"
+          className="rounded-[18px] border-4 border-[#41295a] bg-[#ff91c1] px-4 py-2 text-sm font-bold text-[#41295a] shadow-sticker transition hover:-translate-y-0.5"
         >
           Abrir projeto
         </Link>

@@ -18,10 +18,12 @@ export default {
         }
       },
       boxShadow: {
-        panel: '0 20px 45px rgba(15, 23, 42, 0.18)'
+        panel: '0 18px 0 rgba(15, 23, 42, 0.14), 0 30px 50px rgba(15, 23, 42, 0.18)',
+        sticker: '0 8px 0 rgba(15, 23, 42, 0.1)'
       },
       fontFamily: {
-        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+        sans: ['"Baloo 2"', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+        display: ['"Fredoka"', '"Baloo 2"', 'system-ui', 'sans-serif']
       }
     }
   },

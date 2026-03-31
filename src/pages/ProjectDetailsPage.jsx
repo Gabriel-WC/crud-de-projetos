@@ -136,64 +136,64 @@ function ProjectDetailsPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-[32px] border border-white/10 bg-slate-900/80 p-6 shadow-panel sm:p-8">
-        <Link to="/" className="text-sm font-medium text-brand-300 hover:text-brand-200">
+      <section className="rounded-[36px] border-4 border-[#41295a] bg-[#fffdf7] p-6 shadow-panel sm:p-8">
+        <Link to="/" className="text-sm font-bold text-[#ff4f95] hover:text-[#e93e83]">
           {'<-'} Voltar para dashboard
         </Link>
 
         <div className="mt-6 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-brand-300">Projeto</p>
-            <h2 className="mt-3 text-4xl font-semibold text-white">{project.name}</h2>
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-slate-400">
+            <p className="text-sm uppercase tracking-[0.25em] text-[#ff4f95]">Projeto</p>
+            <h2 className="mt-3 font-display text-4xl font-semibold text-[#41295a]">{project.name}</h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-[#755392]">
               {project.description || 'Sem descricao informada.'}
             </p>
-            <p className="mt-4 text-xs text-slate-500">Criado em {formatDate(project.createdAt)}</p>
+            <p className="mt-4 text-xs font-semibold text-[#8d69aa]">Criado em {formatDate(project.createdAt)}</p>
           </div>
 
           <button
             type="button"
             onClick={openCreateTaskModal}
-            className="rounded-2xl bg-brand-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-400"
+            className="rounded-[22px] border-4 border-[#41295a] bg-[#ff91c1] px-5 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:-translate-y-0.5"
           >
             Nova tarefa
           </button>
         </div>
 
         <div className="mt-8 grid gap-4 md:grid-cols-4">
-          <div className="rounded-3xl border border-white/10 bg-slate-950/40 p-5">
-            <p className="text-sm text-slate-300">Total</p>
-            <p className="mt-3 text-3xl font-semibold text-white">{tasks.length}</p>
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#fff1a8] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Total</p>
+            <p className="mt-3 font-display text-3xl font-semibold text-[#41295a]">{tasks.length}</p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-slate-950/40 p-5">
-            <p className="text-sm text-slate-300">Backlog</p>
-            <p className="mt-3 text-3xl font-semibold text-white">{counters.backlog}</p>
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#fff8cc] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Backlog</p>
+            <p className="mt-3 font-display text-3xl font-semibold text-[#41295a]">{counters.backlog}</p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-slate-950/40 p-5">
-            <p className="text-sm text-slate-300">Doing</p>
-            <p className="mt-3 text-3xl font-semibold text-white">{counters.doing}</p>
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#dff7ff] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Doing</p>
+            <p className="mt-3 font-display text-3xl font-semibold text-[#41295a]">{counters.doing}</p>
           </div>
-          <div className="rounded-3xl border border-white/10 bg-slate-950/40 p-5">
-            <p className="text-sm text-slate-300">Done</p>
-            <p className="mt-3 text-3xl font-semibold text-white">{counters.done}</p>
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#e7ffef] p-5 shadow-sticker">
+            <p className="text-sm font-bold text-[#6b4b89]">Done</p>
+            <p className="mt-3 font-display text-3xl font-semibold text-[#41295a]">{counters.done}</p>
           </div>
         </div>
       </section>
 
-      <section className="flex flex-col gap-4 rounded-[32px] border border-white/10 bg-slate-900/80 p-5 shadow-panel lg:flex-row lg:items-center lg:justify-between">
+      <section className="flex flex-col gap-4 rounded-[32px] border-4 border-[#41295a] bg-[#fffdf7] p-5 shadow-panel lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h3 className="text-xl font-semibold text-white">Kanban board</h3>
-          <p className="mt-2 text-sm text-slate-400">
-            Filtre tarefas por status e altere o workflow rapidamente.
+          <h3 className="font-display text-2xl font-semibold text-[#41295a]">Kanban board</h3>
+          <p className="mt-2 text-base text-[#755392]">
+            Filtre tarefas por status e acompanhe o ritmo da aventura.
           </p>
         </div>
 
-        <label className="flex items-center gap-3 text-sm text-slate-300">
+        <label className="flex items-center gap-3 text-sm font-bold text-[#6b4b89]">
           Filtro
           <select
             value={filter}
             onChange={(event) => setFilter(event.target.value)}
-            className="rounded-2xl border border-white/10 bg-slate-950 px-4 py-3 text-sm text-white outline-none"
+            className="rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-bold text-[#41295a] outline-none"
           >
             <option value="all">Todos</option>
             <option value="backlog">Backlog</option>
