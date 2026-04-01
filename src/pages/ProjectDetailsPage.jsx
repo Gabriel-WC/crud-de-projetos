@@ -137,13 +137,13 @@ function ProjectDetailsPage() {
   return (
     <div className="space-y-8">
       <section className="rounded-[36px] border-4 border-[#41295a] bg-[#fffdf7] p-6 shadow-panel sm:p-8">
-        <Link to="/" className="text-sm font-bold text-[#ff4f95] hover:text-[#e93e83]">
+        <Link to="/" className="text-sm font-bold text-[#111111] hover:text-[#000000]">
           {'<-'} Voltar para dashboard
         </Link>
 
         <div className="mt-6 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.25em] text-[#ff4f95]">Projeto</p>
+            <p className="text-sm uppercase tracking-[0.25em] text-[#111111]">Projeto</p>
             <h2 className="mt-3 font-display text-4xl font-semibold text-[#41295a]">{project.name}</h2>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#755392]">
               {project.description || 'Sem descrição informada.'}
@@ -154,7 +154,7 @@ function ProjectDetailsPage() {
           <button
             type="button"
             onClick={openCreateTaskModal}
-            className="rounded-[22px] border-4 border-[#41295a] bg-[#ff91c1] px-5 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:-translate-y-0.5"
+            className="rounded-[22px] border-4 border-[#41295a] bg-[#111111] px-5 py-3 text-sm font-bold text-white shadow-sticker transition hover:-translate-y-0.5 hover:bg-[#000000]"
           >
             Nova tarefa
           </button>

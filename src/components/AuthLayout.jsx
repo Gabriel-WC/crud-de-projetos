@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 function AuthLayout({ title, subtitle, children, footerText, footerLink, footerLabel }) {
   return (
-    <div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(255,196,54,0.35),_transparent_20%),radial-gradient(circle_at_top_right,_rgba(255,126,182,0.35),_transparent_22%),radial-gradient(circle_at_bottom_left,_rgba(34,197,247,0.28),_transparent_18%),linear-gradient(180deg,_#fff8dc,_#ffe9f6_52%,_#ddf4ff)] px-4 py-10 text-[#41295a]">
+    <div className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(255,196,54,0.35),_transparent_20%),radial-gradient(circle_at_top_right,_rgba(163,163,163,0.3),_transparent_22%),radial-gradient(circle_at_bottom_left,_rgba(34,197,247,0.28),_transparent_18%),linear-gradient(180deg,_#fff8dc,_#f3f4f6_52%,_#ddf4ff)] px-4 py-10 text-[#41295a]">
       <div className="pointer-events-none absolute left-8 top-8 h-24 w-24 rounded-full bg-[#fff1a8] opacity-70 blur-xl" />
-      <div className="pointer-events-none absolute bottom-10 right-10 h-32 w-32 rounded-full bg-[#ffb7d9] opacity-70 blur-xl" />
+      <div className="pointer-events-none absolute bottom-10 right-10 h-32 w-32 rounded-full bg-[#d4d4d8] opacity-70 blur-xl" />
       <div className="mx-auto grid min-h-[calc(100vh-5rem)] max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <section className="relative flex flex-col justify-between rounded-[38px] border-4 border-[#41295a] bg-[#fffdf7] p-8 shadow-panel sm:p-12">
           <div>
@@ -30,7 +30,7 @@ function AuthLayout({ title, subtitle, children, footerText, footerLink, footerL
               <p className="font-display text-3xl font-semibold text-[#41295a]">100%</p>
               <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">{'Espaço só seu'}</p>
             </div>
-            <div className="rotate-[2deg] rounded-[30px] border-4 border-[#41295a] bg-[#ffbdd8] p-4 shadow-sticker">
+            <div className="rotate-[2deg] rounded-[30px] border-4 border-[#41295a] bg-[#e5e7eb] p-4 shadow-sticker">
               <p className="font-display text-3xl font-semibold text-[#41295a]">Firebase</p>
               <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">Backend serverless</p>
             </div>
@@ -48,7 +48,7 @@ function AuthLayout({ title, subtitle, children, footerText, footerLink, footerL
 
             <p className="mt-6 text-sm font-medium text-[#755392]">
               {footerText}{' '}
-              <Link to={footerLink} className="font-bold text-[#ff4f95] hover:text-[#e93e83]">
+              <Link to={footerLink} className="font-bold text-[#111111] hover:text-[#000000]">
                 {footerLabel}
               </Link>
             </p>

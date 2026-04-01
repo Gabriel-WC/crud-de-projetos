@@ -7,7 +7,7 @@ function EmptyState({ title, description, actionLabel, onAction }) {
         <button
           type="button"
           onClick={onAction}
-          className="mt-6 rounded-[22px] border-4 border-[#41295a] bg-[#ff91c1] px-5 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:-translate-y-0.5 hover:bg-[#ff7eb6]"
+          className="mt-6 rounded-[22px] border-4 border-[#41295a] bg-[#111111] px-5 py-3 text-sm font-bold text-white shadow-sticker transition hover:-translate-y-0.5 hover:bg-[#000000]"
         >
           {actionLabel}
         </button>

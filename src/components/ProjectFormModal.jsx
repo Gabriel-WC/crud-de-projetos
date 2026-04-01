@@ -52,7 +52,7 @@ function ProjectFormModal({ open, onClose, onSubmit, loading, error, initialValu
           <button
             type="button"
             onClick={onClose}
-            className="rounded-[18px] border-4 border-[#41295a] bg-[#ffd1e4] px-3 py-2 text-sm font-bold text-[#7b2853] shadow-sticker"
+            className="rounded-[18px] border-4 border-[#41295a] bg-[#e5e7eb] px-3 py-2 text-sm font-bold text-[#111827] shadow-sticker"
           >
             Fechar
           </button>
@@ -77,7 +77,7 @@ function ProjectFormModal({ open, onClose, onSubmit, loading, error, initialValu
               onChange={handleChange}
               placeholder="Descreva escopo, objetivo e contexto"
               rows="4"
-              className="w-full rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-medium text-[#41295a] outline-none transition placeholder:text-[#b88ccf] focus:border-[#ff6ca8]"
+              className="w-full rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-medium text-[#41295a] outline-none transition placeholder:text-[#9ca3af] focus:border-[#111111]"
             />
           </label>
 
@@ -92,7 +92,7 @@ function ProjectFormModal({ open, onClose, onSubmit, loading, error, initialValu
             <button
               type="submit"
               disabled={loading}
-              className="rounded-[20px] border-4 border-[#41295a] bg-[#9fe7ff] px-4 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:bg-[#82dbfb] disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-[20px] border-4 border-[#41295a] bg-[#111111] px-4 py-3 text-sm font-bold text-white shadow-sticker transition hover:bg-[#000000] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? 'Salvando...' : 'Salvar projeto'}
             </button>

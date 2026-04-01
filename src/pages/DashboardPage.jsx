@@ -97,10 +97,10 @@ function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-[36px] border-4 border-[#41295a] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.65),_transparent_24%),linear-gradient(135deg,_#ffef9d,_#ffb8d7_48%,_#9fe7ff)] p-6 shadow-panel sm:p-8">
+      <section className="rounded-[36px] border-4 border-[#41295a] bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.65),_transparent_24%),linear-gradient(135deg,_#ffef9d,_#d4d4d8_48%,_#9fe7ff)] p-6 shadow-panel sm:p-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-[#ff4f95]">Dashboard</p>
+            <p className="text-sm uppercase tracking-[0.3em] text-[#111111]">Dashboard</p>
             <h2 className="mt-3 font-display text-4xl font-semibold text-[#41295a]">
               {'Seus projetos em um painel central'}
             </h2>
@@ -125,7 +125,7 @@ function DashboardPage() {
             <p className="text-sm font-bold text-[#6b4b89]">Projetos ativos</p>
             <p className="mt-3 font-display text-4xl font-semibold text-[#41295a]">{totalProjects}</p>
           </div>
-          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#ffe0ef] p-5 shadow-sticker">
+          <div className="rounded-[28px] border-4 border-[#41295a] bg-[#e5e7eb] p-5 shadow-sticker">
             <p className="text-sm font-bold text-[#6b4b89]">{'Último projeto'}</p>
             <p className="mt-3 text-lg font-bold text-[#41295a]">
               {latestProject?.name || 'Nenhum projeto ainda'}

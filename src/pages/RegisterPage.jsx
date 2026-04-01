@@ -73,7 +73,7 @@ function RegisterPage() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-[22px] border-4 border-[#41295a] bg-[#ff91c1] px-4 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:bg-[#ff7eb6] disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-[22px] border-4 border-[#41295a] bg-[#111111] px-4 py-3 text-sm font-bold text-white shadow-sticker transition hover:bg-[#000000] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? 'Criando conta...' : 'Criar conta'}
         </button>

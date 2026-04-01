@@ -100,7 +100,7 @@ function KanbanBoard({ tasks, filter, onStatusChange, onEdit, onDelete }) {
                     <button
                       type="button"
                       onClick={() => onDelete(task)}
-                      className="rounded-[18px] border-4 border-[#41295a] bg-[#ffd1e4] px-3 py-2 text-xs font-bold text-[#7b2853] shadow-sticker"
+                      className="rounded-[18px] border-4 border-[#41295a] bg-[#e5e7eb] px-3 py-2 text-xs font-bold text-[#111827] shadow-sticker"
                     >
                       Excluir
                     </button>
