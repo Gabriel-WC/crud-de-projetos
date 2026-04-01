@@ -12,26 +12,27 @@ function AuthLayout({ title, subtitle, children, footerText, footerLink, footerL
               Mini Jira
             </span>
             <h1 className="mt-6 max-w-xl font-display text-4xl font-semibold leading-tight text-[#41295a] sm:text-5xl">
-              Transforme tarefas em missoes divertidas e super organizadas.
+              {'Organize projetos e tarefas com um fluxo claro, visual e agradável.'}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-[#6b4b89]">
-              Um cantinho alegre para planejar projetos, mover cartoes pelo board e acompanhar
-              cada etapa com mais cor, ritmo e personalidade.
+              {
+                'Uma interface mais leve e animada para planejar projetos, mover cartões pelo board e acompanhar cada etapa com clareza.'
+              }
             </p>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
             <div className="rotate-[-2deg] rounded-[30px] border-4 border-[#41295a] bg-[#ffd96f] p-4 shadow-sticker">
               <p className="font-display text-3xl font-semibold text-[#41295a]">3</p>
-              <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">Fases da aventura</p>
+              <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">{'Etapas do workflow'}</p>
             </div>
             <div className="translate-y-4 rounded-[30px] border-4 border-[#41295a] bg-[#9fe7ff] p-4 shadow-sticker">
               <p className="font-display text-3xl font-semibold text-[#41295a]">100%</p>
-              <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">Espaco so seu</p>
+              <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">{'Espaço só seu'}</p>
             </div>
             <div className="rotate-[2deg] rounded-[30px] border-4 border-[#41295a] bg-[#ffbdd8] p-4 shadow-sticker">
               <p className="font-display text-3xl font-semibold text-[#41295a]">Firebase</p>
-              <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">Motor na nuvem</p>
+              <p className="mt-2 text-sm font-semibold text-[#5b3d7a]">Backend serverless</p>
             </div>
           </div>
         </section>

@@ -18,9 +18,9 @@ function AppShell() {
             <span className="inline-flex rounded-full border-4 border-[#41295a] bg-[#fffdf7] px-4 py-2 text-xs font-bold uppercase tracking-[0.28em] text-[#ff4f95] shadow-sticker">
               Mini Jira
             </span>
-            <h1 className="mt-4 font-display text-4xl font-semibold text-[#41295a]">Project Party</h1>
+            <h1 className="mt-4 font-display text-4xl font-semibold text-[#41295a]">Project Flow</h1>
             <p className="mt-3 text-base leading-7 text-[#6b4b89]">
-              Controle projetos, mova cartoes e acompanhe o progresso com um clima mais leve.
+              {'Controle projetos, mova cartões e acompanhe o progresso com uma interface mais leve.'}
             </p>
           </div>
 
@@ -41,12 +41,12 @@ function AppShell() {
           </nav>
 
           <div className="mt-10 rounded-[30px] border-4 border-[#41295a] bg-[#fffdf7] p-4 shadow-sticker">
-            <p className="text-xs uppercase tracking-[0.2em] text-[#ff4f95]">Sessao</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-[#ff4f95]">{'Sessão'}</p>
             <p className="mt-2 break-all text-sm font-semibold text-[#5b3d7a]">{user?.email}</p>
             <button
               type="button"
               onClick={handleLogout}
-              className="mt-4 w-full rounded-[22px] border-4 border-[#41295a] bg-[#9fe7ff] px-4 py-3 text-sm font-bold text-[#41295a] transition hover:-translate-y-0.5 hover:bg-[#82dbfb]"
+              className="mt-4 w-full rounded-[22px] border-4 border-[#41295a] bg-[#9fe7ff] px-4 py-3 text-sm font-bold text-[#41295a] transition hover:bg-[#82dbfb]"
             >
               Sair
             </button>

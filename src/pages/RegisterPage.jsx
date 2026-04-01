@@ -36,8 +36,8 @@ function RegisterPage() {
   return (
     <AuthLayout
       title="Criar conta"
-      subtitle="Cadastre-se para criar projetos, tarefas e acompanhar o fluxo."
-      footerText="Ja possui uma conta?"
+      subtitle={'Cadastre-se para criar projetos, organizar tarefas e acompanhar seu fluxo de trabalho.'}
+      footerText={'Já possui uma conta?'}
       footerLink="/login"
       footerLabel="Fazer login"
     >
@@ -57,7 +57,7 @@ function RegisterPage() {
           type="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="voce@empresa.com"
+          placeholder={'você@empresa.com'}
           required
         />
         <FormField
@@ -73,25 +73,32 @@ function RegisterPage() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-2xl bg-brand-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-[22px] border-4 border-[#41295a] bg-[#ff91c1] px-4 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:bg-[#ff7eb6] disabled:cursor-not-allowed disabled:opacity-60"
         >
           {loading ? 'Criando conta...' : 'Criar conta'}
         </button>
       </form>
 
       <div className="my-5 flex items-center gap-3">
-        <div className="h-px flex-1 bg-white/10" />
-        <span className="text-xs uppercase tracking-[0.25em] text-slate-500">ou</span>
-        <div className="h-px flex-1 bg-white/10" />
+        <div className="h-1 flex-1 rounded-full bg-[#ffd96f]" />
+        <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#8d69aa]">ou</span>
+        <div className="h-1 flex-1 rounded-full bg-[#9fe7ff]" />
       </div>
 
       <button
         type="button"
         onClick={handleGoogleRegister}
         disabled={googleAction.loading}
-        className="flex w-full items-center justify-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm font-semibold text-white transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-60"
+        className="flex w-full items-center justify-center gap-3 rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:bg-[#fff7dc] disabled:cursor-not-allowed disabled:opacity-60"
       >
-        <span className="text-base">G</span>
+        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border-4 border-[#41295a] bg-white shadow-sticker">
+          <svg viewBox="0 0 24 24" aria-hidden="true" className="h-4 w-4">
+            <path fill="#EA4335" d="M12 10.2v3.9h5.4c-.2 1.2-.9 2.2-1.9 3l3 2.3c1.8-1.7 2.8-4.1 2.8-7 0-.7-.1-1.5-.2-2.2H12Z" />
+            <path fill="#34A853" d="M12 21c2.5 0 4.6-.8 6.1-2.3l-3-2.3c-.8.6-1.9 1-3.1 1-2.4 0-4.5-1.6-5.2-3.9l-3.1 2.4C5.1 18.9 8.3 21 12 21Z" />
+            <path fill="#4A90E2" d="M6.8 13.5c-.2-.6-.3-1.1-.3-1.7s.1-1.2.3-1.7l-3.1-2.4C3 9.1 2.6 10.5 2.6 12s.4 2.9 1.1 4.2l3.1-2.7Z" />
+            <path fill="#FBBC05" d="M12 6.5c1.4 0 2.7.5 3.7 1.4l2.8-2.8C16.6 3.5 14.5 2.6 12 2.6c-3.7 0-6.9 2.1-8.3 5.1l3.1 2.4c.7-2.3 2.8-3.6 5.2-3.6Z" />
+          </svg>
+        </span>
         {googleAction.loading ? 'Conectando com Google...' : 'Continuar com Google'}
       </button>
     </AuthLayout>

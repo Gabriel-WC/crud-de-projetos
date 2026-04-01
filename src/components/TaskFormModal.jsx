@@ -40,18 +40,22 @@ function TaskFormModal({ open, onClose, onSubmit, loading, error, initialValues 
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/70 px-4 backdrop-blur-sm">
-      <div className="w-full max-w-xl rounded-[28px] border border-white/10 bg-slate-900 p-6 shadow-panel">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#41295a]/35 px-4 backdrop-blur-sm">
+      <div className="w-full max-w-xl rounded-[34px] border-4 border-[#41295a] bg-[#fffdf7] p-6 shadow-panel">
         <div className="mb-6 flex items-start justify-between gap-4">
           <div>
-            <h3 className="text-2xl font-semibold text-white">
+            <h3 className="font-display text-3xl font-semibold text-[#41295a]">
               {initialValues ? 'Editar tarefa' : 'Nova tarefa'}
             </h3>
-            <p className="mt-2 text-sm text-slate-400">
-              Organize o trabalho por etapa e acompanhe o que precisa avancar.
+            <p className="mt-2 text-base leading-7 text-[#755392]">
+              {'Organize o trabalho por etapa e acompanhe o que precisa avançar.'}
             </p>
           </div>
-          <button type="button" onClick={onClose} className="text-slate-400 hover:text-white">
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-[18px] border-4 border-[#41295a] bg-[#ffd1e4] px-3 py-2 text-sm font-bold text-[#7b2853] shadow-sticker"
+          >
             Fechar
           </button>
         </div>
@@ -59,7 +63,7 @@ function TaskFormModal({ open, onClose, onSubmit, loading, error, initialValues 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <AlertMessage message={error} />
           <FormField
-            label="Titulo"
+            label={'Título'}
             name="title"
             value={formData.title}
             onChange={handleChange}
@@ -68,24 +72,24 @@ function TaskFormModal({ open, onClose, onSubmit, loading, error, initialValues 
           />
 
           <label className="block">
-            <span className="mb-2 block text-sm font-medium text-slate-200">Descricao</span>
+            <span className="mb-2 block text-sm font-bold text-[#5b3d7a]">{'Descrição'}</span>
             <textarea
               name="description"
               value={formData.description}
               onChange={handleChange}
-              placeholder="Defina detalhes e criterio de conclusao"
+              placeholder={'Defina detalhes e critério de conclusão'}
               rows="4"
-              className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-white outline-none transition placeholder:text-slate-500 focus:border-brand-400"
+              className="w-full rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-medium text-[#41295a] outline-none transition placeholder:text-[#b88ccf] focus:border-[#ff6ca8]"
             />
           </label>
 
           <label className="block">
-            <span className="mb-2 block text-sm font-medium text-slate-200">Status</span>
+            <span className="mb-2 block text-sm font-bold text-[#5b3d7a]">Status</span>
             <select
               name="status"
               value={formData.status}
               onChange={handleChange}
-              className="w-full rounded-2xl border border-white/10 bg-slate-950/60 px-4 py-3 text-sm text-white outline-none transition focus:border-brand-400"
+              className="w-full rounded-[22px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-bold text-[#41295a] outline-none transition focus:border-[#ff6ca8]"
             >
               <option value="backlog">Backlog</option>
               <option value="doing">Doing</option>
@@ -97,14 +101,14 @@ function TaskFormModal({ open, onClose, onSubmit, loading, error, initialValues 
             <button
               type="button"
               onClick={onClose}
-              className="rounded-2xl border border-white/10 px-4 py-3 text-sm font-semibold text-slate-200 hover:bg-white/5"
+              className="rounded-[20px] border-4 border-[#41295a] bg-white px-4 py-3 text-sm font-bold text-[#41295a] shadow-sticker"
             >
               Cancelar
             </button>
             <button
               type="submit"
               disabled={loading}
-              className="rounded-2xl bg-brand-500 px-4 py-3 text-sm font-semibold text-white transition hover:bg-brand-400 disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-[20px] border-4 border-[#41295a] bg-[#9fe7ff] px-4 py-3 text-sm font-bold text-[#41295a] shadow-sticker transition hover:bg-[#82dbfb] disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? 'Salvando...' : 'Salvar tarefa'}
             </button>

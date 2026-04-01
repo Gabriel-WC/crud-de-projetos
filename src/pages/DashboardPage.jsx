@@ -73,7 +73,7 @@ function DashboardPage() {
 
   async function handleDelete(project) {
     const confirmed = window.confirm(
-      `Deseja realmente excluir o projeto "${project.name}"? Todas as tarefas vinculadas tambem serao removidas.`,
+      `Deseja realmente excluir o projeto "${project.name}"? Todas as tarefas vinculadas também serão removidas.`,
     );
 
     if (!confirmed) {
@@ -102,11 +102,12 @@ function DashboardPage() {
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-[#ff4f95]">Dashboard</p>
             <h2 className="mt-3 font-display text-4xl font-semibold text-[#41295a]">
-              Seu quartel-general mais fofo e organizado
+              {'Seus projetos em um painel central'}
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-7 text-[#5b3d7a]">
-              Crie aventuras, acompanhe o progresso e deixe cada tarefa deslizar pelo board com
-              muito mais personalidade.
+              {
+                'Crie projetos, acompanhe o progresso e abra cada board para organizar tarefas entre backlog, doing e done.'
+              }
             </p>
           </div>
 
@@ -125,7 +126,7 @@ function DashboardPage() {
             <p className="mt-3 font-display text-4xl font-semibold text-[#41295a]">{totalProjects}</p>
           </div>
           <div className="rounded-[28px] border-4 border-[#41295a] bg-[#ffe0ef] p-5 shadow-sticker">
-            <p className="text-sm font-bold text-[#6b4b89]">Ultimo projeto</p>
+            <p className="text-sm font-bold text-[#6b4b89]">{'Último projeto'}</p>
             <p className="mt-3 text-lg font-bold text-[#41295a]">
               {latestProject?.name || 'Nenhum projeto ainda'}
             </p>
@@ -143,7 +144,7 @@ function DashboardPage() {
       {projects.length === 0 ? (
         <EmptyState
           title="Nenhum projeto criado"
-          description="Comece cadastrando seu primeiro projeto para organizar tarefas, status e entregas."
+          description={'Comece cadastrando seu primeiro projeto para organizar tarefas, status e entregas.'}
           actionLabel="Criar primeiro projeto"
           onAction={openCreateModal}
         />
