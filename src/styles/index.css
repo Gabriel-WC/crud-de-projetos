@@ -44,3 +44,19 @@ select {
   background: #ff96c7;
   color: #2f1847;
 }
+
+button,
+a,
+article,
+section {
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+button:hover,
+a:hover {
+  transform: translateY(-1px);
+}

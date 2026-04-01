@@ -15,7 +15,7 @@ const missingEnvVars = requiredEnvVars.filter((key) => !import.meta.env[key]);
 
 if (missingEnvVars.length > 0) {
   throw new Error(
-    `Firebase nao configurado. Defina as variaveis no arquivo .env da raiz: ${missingEnvVars.join(', ')}`,
+    `Firebase não configurado. Defina as variáveis no arquivo .env da raiz: ${missingEnvVars.join(', ')}`,
   );
 }
 

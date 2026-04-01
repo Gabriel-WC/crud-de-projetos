@@ -146,7 +146,7 @@ function ProjectDetailsPage() {
             <p className="text-sm uppercase tracking-[0.25em] text-[#ff4f95]">Projeto</p>
             <h2 className="mt-3 font-display text-4xl font-semibold text-[#41295a]">{project.name}</h2>
             <p className="mt-4 max-w-3xl text-base leading-7 text-[#755392]">
-              {project.description || 'Sem descricao informada.'}
+              {project.description || 'Sem descrição informada.'}
             </p>
             <p className="mt-4 text-xs font-semibold text-[#8d69aa]">Criado em {formatDate(project.createdAt)}</p>
           </div>
@@ -184,7 +184,7 @@ function ProjectDetailsPage() {
         <div>
           <h3 className="font-display text-2xl font-semibold text-[#41295a]">Kanban board</h3>
           <p className="mt-2 text-base text-[#755392]">
-            Filtre tarefas por status e acompanhe o ritmo da aventura.
+            {'Filtre tarefas por status e altere o workflow rapidamente.'}
           </p>
         </div>
 
@@ -211,7 +211,7 @@ function ProjectDetailsPage() {
       {tasks.length === 0 ? (
         <EmptyState
           title="Nenhuma tarefa criada"
-          description="Cadastre a primeira tarefa deste projeto para comecar a organizar o fluxo."
+          description={'Cadastre a primeira tarefa deste projeto para começar a organizar o fluxo.'}
           actionLabel="Criar tarefa"
           onAction={openCreateTaskModal}
         />

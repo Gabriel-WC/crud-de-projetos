@@ -7,7 +7,7 @@ function ProtectedRoute({ children }) {
   const location = useLocation();
 
   if (loading) {
-    return <LoadingScreen label="Carregando sessao..." />;
+    return <LoadingScreen label={'Carregando sessão...'} />;
   }
 
   if (!user) {

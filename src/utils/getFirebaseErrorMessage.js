@@ -1,14 +1,14 @@
 const firebaseErrorMap = {
-  'auth/email-already-in-use': 'Este email ja esta em uso.',
-  'auth/invalid-credential': 'Email ou senha invalidos.',
-  'auth/invalid-email': 'Informe um email valido.',
+  'auth/email-already-in-use': 'Este email já está em uso.',
+  'auth/invalid-credential': 'Email ou senha inválidos.',
+  'auth/invalid-email': 'Informe um email válido.',
   'auth/missing-password': 'Informe a senha.',
-  'auth/network-request-failed': 'Falha de rede. Verifique sua conexao e tente novamente.',
+  'auth/network-request-failed': 'Falha de rede. Verifique sua conexão e tente novamente.',
   'auth/too-many-requests': 'Muitas tentativas. Tente novamente em instantes.',
-  'auth/user-not-found': 'Usuario nao encontrado.',
+  'auth/user-not-found': 'Usuário não encontrado.',
   'auth/weak-password': 'A senha deve ter pelo menos 6 caracteres.',
-  'permission-denied': 'Voce nao tem permissao para executar esta acao.',
-  'unavailable': 'Servico temporariamente indisponivel. Tente novamente.',
+  'permission-denied': 'Você não tem permissão para executar esta ação.',
+  unavailable: 'Serviço temporariamente indisponível. Tente novamente.',
 };
 
 export function getFirebaseErrorMessage(error) {
